@@ -1,0 +1,12 @@
+{
+    "plot_points": [
+        {"name": "Austin, TX", "lon": -97.7431, "lat": 30.2672},
+        {"name": "Little Rock, AR", "lon": -92.2880, "lat": 34.7445},
+        {"name": "Texarkana US Post Office", "lon": -94.0431, "lat": 33.42546}
+    ],
+    "map_bounds": {
+        "longitude": [-98.5, -91.5],
+        "latitude": [29.5, 35.5]
+    },
+    "filter_query": "(lat - 0.7 * lon < 101.5) & (lat - 0.75 * lon > 103)"
+}
