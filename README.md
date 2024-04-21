@@ -1,11 +1,16 @@
-# 2024 North American Eclipse Forecasting
+# ⛅ Eclipse Weather Forecasting
 
 ## Why
 
-To help plan trips to view the eclipse.
+To help plan trips to experience a total eclipse.
 Inspired by graphic on New York Times.
 
-Currently hard-coded for values for the 2024 North American Eclipse.
+Currently hard-coded for values for the 2024 North American total solar eclipse.
+
+<details>
+  <summary>Example Forecast Graphic</summary>  
+  <img src="docs/example.png" alt="example forecast graphic"/>
+</details>
 
 ## Getting Started
 

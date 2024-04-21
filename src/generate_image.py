@@ -115,7 +115,7 @@ print("Filtering weather data...")
 
 # Restrict to only points visible on map
 if MAP_BOUNDS:
-    df = filter_by_map_region(df, MAP_BOUNDS, buffer=0.5)
+    df = filter_by_map_region(df, MAP_BOUNDS, buffer=0)
 
 # Arbitrary filter, specified by a query string in config
 # My personal config is using simple linear inequalities to limit region
