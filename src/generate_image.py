@@ -32,17 +32,23 @@ def load_forecast():
     return df
 
 def load_config():
-    with open("config/config.json", "r") as f:
-        config: dict = json.load(f)
-        return config
+    try:
+        with open("config/config.json", "r") as f:
+            config: dict = json.load(f)
+            return config
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("Unable to load config file, using empty dict")
+        return {}
 
 def get_points_of_interest(config: dict):
         plot_points_raw = config.get("plot_points", [])
-        if not plot_points_raw:
-            print("Did not find points to plot")
-            return gpd.GeoDataFrame()
 
-        plot_points = gpd.GeoDataFrame(plot_points_raw)
+        if plot_points_raw:
+            plot_points = gpd.GeoDataFrame(plot_points_raw)
+        else:
+            print("Did not find points to plot")
+            plot_points = gpd.GeoDataFrame(columns=["name", "lon", "lat"])
+
         plot_points = plot_points.set_geometry(
             gpd.points_from_xy(plot_points["lon"], plot_points["lat"])
         )

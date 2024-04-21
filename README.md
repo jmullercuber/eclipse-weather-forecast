@@ -9,7 +9,7 @@ Currently hard-coded for values for the 2024 North American Eclipse.
 
 ## Getting Started
 
-Assumption is that you have Python and Poetry installed on a Debian-based machine.
+Assumption is that you have Python and Poetry installed.
 
 ```sh
 # Install python deps
@@ -21,13 +21,15 @@ This is a one-time thing. See [the Manual Resources section](#manual-👷) for m
 
 ## Usage
 
-Run the following in your terminal
+Run the following in your terminal:
 
 ```sh
 ./run.sh
 ```
 
-View the generated image in the `data/out` directory
+View the generated image in the `data/out` directory.
+
+Create a [config/config.json](config/config.json) file to adjust program parameters. Refer to the [example config here](config/example_config.json).
 
 ## Resources
 
@@ -45,4 +47,4 @@ View the generated image in the `data/out` directory
 
 - 🗺️ US Census TIGER
   - Base map of United states to help visualize eclipse and weather relative to land. Learn more here: https://www.census.gov/cgi-bin/geo/shapefiles/index.php
-  - In the form, select the latest year, and the "States (and equivalent)" Layer type. Submit the form to download. Extract to the [data/base_maps/](data/base_maps/) folder.
+  - On the TIGER webpage, select the latest year, and the "States (and equivalent)" Layer type. Submit the form to download. Extract to the [data/base_maps/](data/base_maps/) folder.
